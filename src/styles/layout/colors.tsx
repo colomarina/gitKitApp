@@ -49,7 +49,6 @@ const colors = {
   white: '#ffffff',
 
   transparent: 'transparent',
-
 };
 
 export default colors;

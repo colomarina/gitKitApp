@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 // if you use expo remove this line
 import { AppRegistry } from 'react-native';
 

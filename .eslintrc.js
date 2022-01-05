@@ -1,7 +1,20 @@
 module.exports = {
   root: true,
-  extends: '@react-native-community',
+  extends: ['@react-native-community', 'airbnb', 'airbnb-typescript'],
   parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: './tsconfig.eslint.json',
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+    'import/resolver': {
+      typescript: {
+        project: '.',
+      },
+    },
+  },
   plugins: ['@typescript-eslint'],
   rules: {
     'no-shadow': 'off',
@@ -10,7 +23,7 @@ module.exports = {
       'error',
       {
         ignoreComments: true,
-        code: 150,
+        code: 100,
       },
     ],
     'eol-last': ['error', 'always'],
@@ -21,18 +34,19 @@ module.exports = {
     'react/jsx-one-expression-per-line': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-no-target-blank': 'off',
-    'jsx-a11y/label-has-associated-control': 'off',
     'prettier/prettier': [
       'error',
       {
         endOfLine: 'auto',
       },
     ],
-    // 'import/no-extraneous-dependencies': [
-    //   'error',
-    //   {
-    //     devDependencies: ['./src/stories/**'],
-    //   },
-    // ],
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: ['./src/stories/**', '**/*test.js', '**/*.spec.js', '**/storybook/**'],
+      },
+    ],
+    'arrow-parens': ['error', 'as-needed'],
+    'implicit-arrow-linebreak': 0,
   },
 };

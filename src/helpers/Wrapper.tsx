@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { FunctionComponent, useContext } from 'react';
 import { StyleSheet, View, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import CustomStatusBar from '../components/StatusBar';
@@ -19,16 +19,14 @@ const styles = StyleSheet.create({
   },
 });
 
-const Wrapper = ({ children }) => {
+const Wrapper: FunctionComponent = ({ children }) => {
   const { theme } = useContext(ThemeContext);
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <SafeAreaProvider>
         <CustomStatusBar />
-        <View style={[styles.container, styles[theme]]}>
-          {children}
-        </View>
+        <View style={[styles.container, styles[theme]]}>{children}</View>
       </SafeAreaProvider>
     </TouchableWithoutFeedback>
   );

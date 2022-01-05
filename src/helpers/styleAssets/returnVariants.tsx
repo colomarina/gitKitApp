@@ -21,10 +21,7 @@ const variants = {
   },
 };
 
-const returnVariant = (
-  componentType: string,
-  componentHierarchy: string,
-  variantName: string,
-) => variants[componentType][componentHierarchy][variantName];
+const returnVariant = (componentType: string, componentHierarchy: string, variantName: string) =>
+  variants[componentType][componentHierarchy][variantName];
 
 export default returnVariant;

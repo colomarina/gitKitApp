@@ -1,3 +1,5 @@
+/* eslint-disable import/order */
+/* eslint-disable react/jsx-filename-extension */
 /**
  * @format
  */

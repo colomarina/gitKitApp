@@ -11,7 +11,7 @@ export const ThemeContext = createContext<ContextType>({ theme: 'base' });
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState('base');
 
-  const toggleTheme = (selectedTheme) => {
+  const toggleTheme = selectedTheme => {
     const themeActionList = {
       base: () => {
         setTheme('base');
@@ -24,9 +24,5 @@ export const ThemeProvider = ({ children }) => {
     };
     themeActionList[selectedTheme]();
   };
-  return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  );
+  return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>;
 };

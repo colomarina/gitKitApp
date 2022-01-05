@@ -1,89 +1,91 @@
-import { PremadeMaskType } from '../types/components/Input';
+// TODO: Uncomment when Input component gets migrated.
 
-const maskCurrency: PremadeMaskType = {
-  type: 'money',
-  options: {
-    precision: 2,
-    separator: ',',
-    delimiter: '.',
-    unit: '$ ',
-    suffixUnit: '',
-  },
-};
+// import { PremadeMaskType } from '../types/components/Input';
 
-const noPrefixCurrency = {
-  ...maskCurrency,
-  options: {
-    unit: '',
-  },
-};
+// const maskCurrency: PremadeMaskType = {
+//   type: 'money',
+//   options: {
+//     precision: 2,
+//     separator: ',',
+//     delimiter: '.',
+//     unit: '$ ',
+//     suffixUnit: '',
+//   },
+// };
 
-const maskDNI: PremadeMaskType = {
-  type: 'money',
-  options: {
-    precision: 0,
-    separator: '',
-    delimiter: '.',
-    unit: '',
-    suffixUnit: '',
-  },
-  maxLength: 10,
-};
+// const noPrefixCurrency = {
+//   ...maskCurrency,
+//   options: {
+//     unit: '',
+//   },
+// };
 
-const maskDNITramite: PremadeMaskType = {
-  type: 'only-numbers',
-  options: {},
-  maxLength: 20,
-};
+// const maskDNI: PremadeMaskType = {
+//   type: 'money',
+//   options: {
+//     precision: 0,
+//     separator: '',
+//     delimiter: '.',
+//     unit: '',
+//     suffixUnit: '',
+//   },
+//   maxLength: 10,
+// };
 
-const maskInteger: PremadeMaskType = {
-  type: 'money',
-  options: {
-    precision: 0,
-    separator: '',
-    delimiter: '.',
-    unit: '',
-    suffixUnit: '',
-  },
-};
+// const maskDNITramite: PremadeMaskType = {
+//   type: 'only-numbers',
+//   options: {},
+//   maxLength: 20,
+// };
 
-const maskFloat: PremadeMaskType = {
-  type: 'money',
-  options: {
-    precision: 2,
-    separator: ',',
-    delimiter: '.',
-    unit: '',
-    suffixUnit: '',
-  },
-};
+// const maskInteger: PremadeMaskType = {
+//   type: 'money',
+//   options: {
+//     precision: 0,
+//     separator: '',
+//     delimiter: '.',
+//     unit: '',
+//     suffixUnit: '',
+//   },
+// };
 
-const maskTINNumber: PremadeMaskType = {
-  type: 'money',
-  options: {
-    precision: 0,
-    separator: '',
-    delimiter: '',
-    unit: '',
-    suffixUnit: '',
-  },
-  maxLength: 9,
-};
+// const maskFloat: PremadeMaskType = {
+//   type: 'money',
+//   options: {
+//     precision: 2,
+//     separator: ',',
+//     delimiter: '.',
+//     unit: '',
+//     suffixUnit: '',
+//   },
+// };
+
+// const maskTINNumber: PremadeMaskType = {
+//   type: 'money',
+//   options: {
+//     precision: 0,
+//     separator: '',
+//     delimiter: '',
+//     unit: '',
+//     suffixUnit: '',
+//   },
+//   maxLength: 9,
+// };
 
 const InputMasks = {
-  date: {
-    DD_MM_YYYY: [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/],
-    MM_YYYY: [/\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/],
-  },
-  number: {
-    CURRENCY: maskCurrency,
-    CURRENCY_WITHOUT_PREFIX: noPrefixCurrency,
-    DNI: maskDNI,
-    DNI_TRAMITE: maskDNITramite,
-    FLOAT: maskFloat,
-    INTERGER: maskInteger,
-    TIN: maskTINNumber,
-  },
+  // date: {
+  //   DD_MM_YYYY: [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/],
+  //   MM_YYYY: [/\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/],
+  // },
+  // number: {
+  //   CURRENCY: maskCurrency,
+  //   CURRENCY_WITHOUT_PREFIX: noPrefixCurrency,
+  //   DNI: maskDNI,
+  //   DNI_TRAMITE: maskDNITramite,
+  //   FLOAT: maskFloat,
+  //   INTERGER: maskInteger,
+  //   TIN: maskTINNumber,
+  // },
 };
 
 export default InputMasks;
