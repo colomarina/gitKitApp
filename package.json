@@ -16,7 +16,8 @@
     "react-native": "0.66.4",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-server": "0.0.1-beta",
-    "yup": "^0.32.11"
+    "yup": "^0.32.11",
+    "react-native-vector-icons": "^9.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -33,6 +34,7 @@
     "@storybook/react-native": "^5.3.25",
     "@types/lodash": "^4.14.178",
     "@types/react-native": "^0.66.11",
+    "@types/react-native-vector-icons": "^6.4.10",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "babel-jest": "^26.6.3",
